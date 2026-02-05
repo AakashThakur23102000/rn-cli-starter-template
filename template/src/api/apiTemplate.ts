@@ -80,8 +80,8 @@ function prepareRequest(args: ApiTemplateArguments) {
         headers["Authorization"] = `Bearer ${token}`;
     }
 
-    // Body
-    let body: BodyInit | undefined = undefined;
+    type CrossBody = string | FormData | undefined;
+    let body: CrossBody = undefined;
 
     if (method !== "GET") {
         if (isFormData) {
