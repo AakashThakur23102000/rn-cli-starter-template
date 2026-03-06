@@ -6,6 +6,18 @@ Copy the Redux + Persist + Theme + Reusable Components setup into any new RN pro
 npx degit AakashThakur23102000/rn-cli-starter-template/template . --force && npm i @reduxjs/toolkit react-redux redux-persist @react-native-async-storage/async-storage react-native-safe-area-context react-native-size-matters @tanstack/react-query && npm i -D @types/react-redux reactotron-react-native && adb reverse tcp:9090 tcp:9090
 ```
 
+**For react-native-async-storage to work add in android/build.gradle**
+```
+allprojects {
+    repositories {
+        maven {
+            url = uri(project(":react-native-async-storage_async-storage").file("local_repo"))
+        }
+    }
+}
+```
+
+
 **What this does**
 - **Copies template files** into your current project using `degit` (no git history; `--force` overwrites existing files if needed).
 - **Installs runtime packages** for Redux, persistence, UI, sizing, and SVGs.
