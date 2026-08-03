@@ -17,6 +17,20 @@ allprojects {
 }
 ```
 
+**Check for package updates if available.**
+```bash
+npm outdated \
+@reduxjs/toolkit \
+react-redux \
+redux-persist \
+@react-native-async-storage/async-storage \
+react-native-safe-area-context \
+react-native-size-matters \
+@tanstack/react-query \
+@types/react-redux \
+reactotron-react-native
+```
+
 
 **What this does**
 - **Copies template files** into your current project using `degit` (no git history; `--force` overwrites existing files if needed).
