@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from './src/hooks/storeHooks';
 import { setThemeMode } from './src/store/themeSlice';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ScaledSheet } from 'react-native-size-matters';
-import CustomText from './src/components/CustomText';
+import Text from './src/components/Text';
 
 const App = () => {
 
@@ -35,7 +35,7 @@ const App = () => {
         barStyle={themeMode === "dark" ? "light-content" : "dark-content"}
       />
       <SafeAreaView style={styles.statusBarAndSafeAreaView}>
-        <CustomText>App</CustomText>
+        <Text>App</Text>
       </SafeAreaView>
     </>
   )
